@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metaphor Words</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+    }
+    #strategy {
+      font-size: 2rem;
+      line-height: 1.4;
+      max-width: 100%;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      background: white;
+      color: black;
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+    }
+    button:active {
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div id="strategy">Tap the button for a word</div>
+  <button onclick="newStrategy()">New Word</button>
+
+  <script>
+    const strategies = [
+      "Bridge", "Door", "Key", "Mirror", "Window", "Tree", "River", "Mountain", "Path", "Road",
+      "Crossroads", "Seed", "Fire", "Water", "Cloud", "Shadow", "Light", "Cave", "Shell", "Mask",
+      "Clock", "Chain", "Ladder", "Nest", "Cocoon", "Butterfly", "Bee", "Web", "Anchor", "Compass",
+      "Island", "Storm", "Scales", "Book", "Thread", "Box", "Map", "Fence", "Candle", "Windowpane",
+      "Ship", "Kite", "Feather", "Garden", "Stone", "Maze", "Lantern", "Suitcase", "Lake", "Echo"
+    ];
+
+    function newStrategy() {
+      const strategy = strategies[Math.floor(Math.random() * strategies.length)];
+      document.getElementById("strategy").textContent = strategy;
+    }
+  </script>
+</body>
+</html>
